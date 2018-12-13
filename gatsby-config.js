@@ -1,10 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
-    description: 'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@gatsbyjs',
+    title: 'Rebel Design Language',
+    description: 'Rebel.com - Design Language and Pattern Library',
+    author: 'Mat Dupont - Rebel.com',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-react-svg',
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        "fileName": false,
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
