@@ -17,8 +17,10 @@ const ComponentLibrary = () => {
   const loadComponentDemos = () => {
     return map(components, (component) => {
         const DemoComponent = demo(component);
+        const { name, displayName } = component;
         return {
-          name: component.name,
+          name,
+          displayName,
           instance: <DemoComponent />,
         };
       });

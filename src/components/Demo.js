@@ -54,16 +54,20 @@ const demoModes = {
     name: 'React',
     renderSnippet: (WrappedComponent, state) => {
       const options = getOptionsString('react', WrappedComponent.options, state);
-      return `<${WrappedComponent.name}${options}/>`;
+      const { displayName, name } = WrappedComponent;
+      const listedName = displayName || name;
+      return `<${listedName}${options}/>`;
     },
   },
   cms: {
     name: 'CMS',
     renderSnippet: (WrappedComponent, state) => {
       const options = getOptionsString('cms', WrappedComponent.options, state);
+      const { displayName, name } = WrappedComponent;
+      const listedName = displayName || name;
       return `ContentMaster.loadComponent(
   "#your-placeholder", 
-  "${WrappedComponent.name}",
+  "${listedName}",
   {
 ${options}  }
 );`;
