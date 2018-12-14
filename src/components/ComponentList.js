@@ -48,17 +48,19 @@ const ComponentList = () => {
         .sort()
         .map(c => components[c])
         .map((component) => {
+          const {displayName} = component;
+          console.log(component)
           return (
             <li
-              key={component.name}
+              key={displayName}
             >
               <ComponentButton
                 type="button"
                 tabIndex="0"
-                onClick={() => scrollToComponent(component.name)}
-                onKeyPress={() => scrollToComponent(component.name)}
+                onClick={() => scrollToComponent(displayName)}
+                onKeyPress={() => scrollToComponent(displayName)}
               >
-                {component.name}
+                {displayName}
               </ComponentButton>
             </li>
     
