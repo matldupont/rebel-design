@@ -45,7 +45,7 @@ export const color = {
 };
 
 export const font = {
-  main: '\"Montserrat\", sans-serif',
+  main: '"Montserrat", sans-serif',
 };
 
 export const gutter = {
@@ -83,18 +83,6 @@ export const body = {
 };
 
 export const shadow = `0 1rem 3rem rgba(${color.black},.5)`;
-
-// $primary: '#333 !default',
-// $primary_dark: darken($primary, 10%)',
-// $primary_darker: darken($primary, 25%)',
-// $primary_darkest: darken($primary, 50%)',
-// $primary_light: lighten($primary, 10%)',
-// $primary_primary_lighter: lighten($primary, 25%)',
-// $primary_primary_lightest: lighten($primary, 50%)',
-
-// $secondary: '#ff9600 !default',
-// $tertiary: '#859f00 !default',
-// $accent: '#fff !default',
 
 export const screen = {
   small: '600px',

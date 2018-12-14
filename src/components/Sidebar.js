@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Heading } from './rebel-components';
 import RebelLogo from '../images/RebelLogo.svg';
 import ComponentList from './ComponentList';
-import { color, font } from '../utilities/styles';
+import { color } from '../utilities/styles';
 
 const ComponentSection = styled.div`
   padding: 0 1rem;
