@@ -48,6 +48,8 @@ const Heading = (props) => {
   );
 };
 
+Heading.displayName = 'Heading';
+
 Heading.defaultProps = {
   id: '',
   size: '1',

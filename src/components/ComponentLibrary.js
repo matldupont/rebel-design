@@ -27,16 +27,17 @@ const ComponentLibrary = () => {
   return (
     <ComponentLibraryWrapper>
       {
-        map(loadComponentDemos(), ({ name, instance }) => {
-            return (
-              <ComponentSection id={name} key={name}>
-                <components.Heading id={`${name}-heading`} size="2">
-                  {name.replace(/([A-Z])/g, ' $1')}
-                </components.Heading>
-                {instance}
-              </ComponentSection>
-            );
-          })
+        map(loadComponentDemos(), ({ displayName, name, instance }) => {
+          const listedName = displayName || name;
+          return (
+            <ComponentSection id={listedName} key={listedName}>
+              <components.Heading id={`${listedName}-heading`} size="2">
+                {listedName.replace(/([A-Z])/g, ' $1')}
+              </components.Heading>
+              {instance}
+            </ComponentSection>
+          );
+        })
       }
     </ComponentLibraryWrapper>
   );

@@ -339,6 +339,8 @@ Button.propTypes = {
   title: PropTypes.string,
 };
 
+Button.displayName = 'Button';
+
 export default Button;
 
 Button.demo = true;
