@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components';
 
 import Header from './header'
-import Sidebar from './Side'
+import Sidebar from './Sidebar'
 
 import { GlobalStyle } from '../utilities/styles'
 
