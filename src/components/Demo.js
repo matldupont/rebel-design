@@ -253,14 +253,14 @@ export default function (WrappedComponent) {
       );
     }
 
-    renderModes() {
+    renderModes(componentName) {
       const { mode } = this.state;
       return (
         <DemoModes>
           {keys(demoModes).map((m) => {
             return (
               <Button
-                id={`demo-mode-${m}`}
+                id={`demo-mode-${m}-${componentName}`}
                 key={m}
                 role="button"
                 green={mode === demoModes[m]}
@@ -289,11 +289,13 @@ export default function (WrappedComponent) {
     }
 
     renderDemo() {
+      const { displayName, name } = WrappedComponent;
+      const listedName = displayName || name;
       return (
         <ComponentDemo>
           <WrappedComponent {...this.state} />
           <ComponentCode>
-            {this.renderModes()}
+            {this.renderModes(listedName)}
             {this.renderCodeSnippet()}
           </ComponentCode>
         </ComponentDemo>

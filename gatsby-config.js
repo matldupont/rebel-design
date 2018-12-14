@@ -36,8 +36,18 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
+    'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Rebel Design Language',
+        short_name: 'RebelDesign',
+        start_url: '/',
+        background_color: '#333',
+        theme_color: '#333',
+        display: 'minimal-ui',
+        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+      },
+    },
   ],
 }
