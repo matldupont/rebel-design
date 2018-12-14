@@ -75,7 +75,7 @@ export const html = {
 export const body = {
   margin: '0',
   padding: '0',
-  fontFamily: `${font.main}`,
+  fontFamily: `${font.new}`,
   fontWeight: '300',
   fontSize: '1.6rem',
   lineHeight: '1.7',

@@ -2,6 +2,8 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components';
 
+import { Heading } from './rebel-components';
+
 import { color } from '../utilities/styles';
 
 const HeaderContainer = styled.header`
@@ -27,7 +29,7 @@ const HeaderContainer = styled.header`
 const Header = ({ siteTitle }) => {
   return (
     <HeaderContainer>
-      <h1>{siteTitle}</h1>
+      <Heading size="1">{siteTitle}</Heading>
     </HeaderContainer>
   );
 };
